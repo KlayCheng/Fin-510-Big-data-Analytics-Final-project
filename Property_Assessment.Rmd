@@ -1,0 +1,153 @@
+---
+title: "Bigdata"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+hist = read.csv("historic_property_data.csv", header= T)
+
+sum(is.na(hist))
+a = colSums(is.na(hist))<5000
+hist = hist[,a]
+```
+
+```{r}
+b = c('meta_town_code','geo_property_city','geo_municipality','geo_school_elem_district','geo_school_hs_district') 
+hist = hist[, -which(names(hist) %in% b)]
+```
+
+```{r}
+histcopy = hist
+```
+
+```{r}
+str(hist)
+
+factor_list =c("meta_class","char_bsmt_fin","char_cnst_qlty",
+"char_ext_wall", "char_gar1_size", "char_heat",
+"char_oheat", "char_repair_cnd", "char_roof_cnst",
+"char_site", "char_type_resd", "char_use",
+"geo_fips", "geo_floodplain", "geo_ohare_noise",
+"geo_property_zip", "geo_withinmr100", "geo_withinmr101300",
+"ind_large_home", "ind_garage", "meta_class",
+"meta_nbhd", "meta_deed_type")
+
+for (i in factor_list){
+  hist[,i] = as.factor(hist[,i])
+}
+str(hist)
+```
+```{r}
+quartiles <- quantile(histcopy$sale_price, probs=c(.25, .75), na.rm = FALSE)
+IQR <- IQR(histcopy$sale_price)
+ 
+Lower <- quartiles[1] - 1.5*IQR
+Upper <- quartiles[2] + 1.5*IQR 
+histcopy = subset(histcopy, histcopy$sale_price > Lower & histcopy$sale_price < Upper)
+```
+
+```{r}
+histcopy = na.omit(histcopy)
+x = model.matrix(sale_price~.,histcopy)[,-1]
+y = histcopy$sale_price
+```
+
+
+```{r}
+library(glmnet)
+set.seed(1)
+train.index <- sample(c(1:dim(x)[1]), dim(x)[1]*0.5)
+head(train.index)
+test.index <- (-train.index)
+y.test <- y[test.index]
+```
+
+```{r}
+set.seed(1)
+cv.fit <- cv.glmnet(x[train.index,],y[train.index],alpha=1, type.measure="mse")
+lambda.best <- cv.fit$lambda.min
+lambda.best 
+```
+
+
+```{r}
+pred.lambda.best <- predict(cv.fit,s=lambda.best,newx=x[test.index,])
+head(pred.lambda.best)
+```
+```{r}
+mean((y.test-pred.lambda.best)^2)
+```
+```{r}
+pred_df = read.csv("predict_property_data.csv")
+head(pred_df)
+```
+```{r}
+pred_df = pred_df[,a]
+pred_df = pred_df[, -which(names(pred_df) %in% b)]
+```
+
+```{r}
+pred_df = na.omit(pred_df)
+pid_list = pred_df[1]
+pred_df = pred_df[,-1]
+```
+
+
+```{r}
+pred_x = model.matrix(~.,pred_df)[,-1]
+```
+```{r}
+pred_x = pred_x[,-59]
+```
+
+```{r}
+pred.pred_df <- predict(cv.fit,s=lambda.best,newx=pred_x)
+head(pred.pred_df)
+```
+```{r}
+pred_value = cbind(pid_list, pred.pred_df)
+head(pred_value)
+```
+```{r}
+write.csv(pred_value, "pred_value.csv",row.names = F)
+```
+
+
+```{r}
+train.index <- sample(c(1:dim(hist)[1]), dim(hist)[1]*0.6)  
+train.df <- hist[train.index,]
+test.df <- hist[-train.index,]
+lm.full<-lm(sale_price~.,data=train.df)
+lm.step.both<-step(lm.full,direction = "both")
+lm.step.pred.both<-predict(lm.step.both,test.df)
+set.seed(1)
+spw_mse<-mean((test.df$sale_price-lm.step.pred.both)^2)
+spw_mse
+```
+
+```{r}
+set.seed(1)
+train.index_rt = sample(c(1:dim(hist)[1]), dim(hist)[1]*0.6)
+train.df_rt <- hist[train.index,]
+test.df_rt <- hist[-train.index,]
+```
+
+```{r}
+library(rpart)
+rt.shallow <- rpart(sale_price~., data = train.df_rt, method = "anova")
+rt.shallow.pred.price <- predict(rt.shallow, test.df_rt,type="vector")
+mean((test.df_rt$sale_price-rt.shallow.pred.price)^2)
+```
+```{r}
+library(ggplot2)
+ggplot(pred_value, aes(x=s1)) + geom_histogram()
+```
+```{r}
+hist(pred_value$s1, main="Distribution of Forecasting Housing Price",
+      xlab = "Housing Price" )
+```
+

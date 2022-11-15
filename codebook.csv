@@ -1,0 +1,203 @@
+var_name_sql,var_name_addchars,var_name_socrata,var_name_standard,var_name_pretty,var_type,var_data_type,var_is_published,var_is_clustered,var_is_predictor,var_code,var_value,var_value_short,var_notes
+AGE,QU_AGE,age,char_age,Age,char,numeric,TRUE,TRUE,TRUE,NA,NA,NA,NA
+AIR,QU_AIR,air,char_air,Central Air Conditioning,char,categorical,TRUE,TRUE,TRUE,1,Central A/C,YES,NA
+AIR,QU_AIR,air,char_air,Central Air Conditioning,char,categorical,TRUE,TRUE,TRUE,2,No Central A/C,NO,NA
+APTS,QU_NUM_APTS,apts,char_apts,Apartments,char,categorical,TRUE,TRUE,TRUE,1,Two,TWO,NA
+APTS,QU_NUM_APTS,apts,char_apts,Apartments,char,categorical,TRUE,TRUE,TRUE,2,Three,THREE,NA
+APTS,QU_NUM_APTS,apts,char_apts,Apartments,char,categorical,TRUE,TRUE,TRUE,3,Four,FOUR,NA
+APTS,QU_NUM_APTS,apts,char_apts,Apartments,char,categorical,TRUE,TRUE,TRUE,4,Five,FIVE,NA
+APTS,QU_NUM_APTS,apts,char_apts,Apartments,char,categorical,TRUE,TRUE,TRUE,5,Six,SIX,NA
+APTS,QU_NUM_APTS,apts,char_apts,Apartments,char,categorical,TRUE,TRUE,TRUE,6,None,NONE,NA
+ATTIC_FNSH,QU_ATTIC_FINISH,attic_fnsh,char_attic_fnsh,Attic Finish,char,categorical,TRUE,TRUE,TRUE,1,Living Area,LAR,NA
+ATTIC_FNSH,QU_ATTIC_FINISH,attic_fnsh,char_attic_fnsh,Attic Finish,char,categorical,TRUE,TRUE,TRUE,2,Partial,PT,NA
+ATTIC_FNSH,QU_ATTIC_FINISH,attic_fnsh,char_attic_fnsh,Attic Finish,char,categorical,TRUE,TRUE,TRUE,3,None,UNF,NA
+ATTIC_TYPE,QU_ATTIC_FINISH,attic_type,char_attic_type,Attic Type,char,categorical,TRUE,TRUE,TRUE,1,Full,FL,NA
+ATTIC_TYPE,QU_ATTIC_FINISH,attic_type,char_attic_type,Attic Type,char,categorical,TRUE,TRUE,TRUE,2,Partial,PT,NA
+ATTIC_TYPE,QU_ATTIC_FINISH,attic_type,char_attic_type,Attic Type,char,categorical,TRUE,TRUE,TRUE,3,None,NO,NA
+BEDS,QU_BEDS,beds,char_beds,Bedrooms,char,numeric,TRUE,FALSE,TRUE,NA,NA,NA,"Number of bedrooms in the property, defined based on building square footage and the judgement of the person in the field."
+BLDG_SF,QU_SQFT_BLD,bldg_sf,char_bldg_sf,Building Square Feet,char,numeric,TRUE,TRUE,TRUE,NA,NA,NA,As measured from the exterior of the building.
+BSMT,QU_BASEMENT_TYPE,bsmt,char_bsmt,Basement,char,categorical,TRUE,TRUE,TRUE,1,Full,FL,NA
+BSMT,QU_BASEMENT_TYPE,bsmt,char_bsmt,Basement,char,categorical,TRUE,TRUE,TRUE,2,Slab,SL,NA
+BSMT,QU_BASEMENT_TYPE,bsmt,char_bsmt,Basement,char,categorical,TRUE,TRUE,TRUE,3,Partial,PT,NA
+BSMT,QU_BASEMENT_TYPE,bsmt,char_bsmt,Basement,char,categorical,TRUE,TRUE,TRUE,4,Crawl,CR,NA
+BSMT_FIN,QU_BASEMENT_FINISH,bsmt_fin,char_bsmt_fin,Basement Finish,char,categorical,TRUE,TRUE,TRUE,1,Formal Rec Room,REC,NA
+BSMT_FIN,QU_BASEMENT_FINISH,bsmt_fin,char_bsmt_fin,Basement Finish,char,categorical,TRUE,TRUE,TRUE,2,Apartment,APT,NA
+BSMT_FIN,QU_BASEMENT_FINISH,bsmt_fin,char_bsmt_fin,Basement Finish,char,categorical,TRUE,TRUE,TRUE,3,Unfinished,UNF,NA
+CNST_QLTY,QU_CONSTRUCT_QUALITY,cnst_qlty,char_cnst_qlty,Construction Quality,char,categorical,TRUE,FALSE,FALSE,1,Deluxe,DLXE,"In general, this field is not used consistently and is therefore not useful for analytical purposes"
+CNST_QLTY,QU_CONSTRUCT_QUALITY,cnst_qlty,char_cnst_qlty,Construction Quality,char,categorical,TRUE,FALSE,FALSE,2,Average,AVG,"In general, this field is not used consistently and is therefore not useful for analytical purposes"
+CNST_QLTY,QU_CONSTRUCT_QUALITY,cnst_qlty,char_cnst_qlty,Construction Quality,char,categorical,TRUE,FALSE,FALSE,3,Poor,POOR,"In general, this field is not used consistently and is therefore not useful for analytical purposes"
+EXT_WALL,QU_EXTERIOR_WALL,ext_wall,char_ext_wall,Wall Material,char,categorical,TRUE,TRUE,TRUE,1,Frame,FRAM,NA
+EXT_WALL,QU_EXTERIOR_WALL,ext_wall,char_ext_wall,Wall Material,char,categorical,TRUE,TRUE,TRUE,2,Masonry,MASR,NA
+EXT_WALL,QU_EXTERIOR_WALL,ext_wall,char_ext_wall,Wall Material,char,categorical,TRUE,TRUE,TRUE,3,Frame + Masonry,FRMA,NA
+EXT_WALL,QU_EXTERIOR_WALL,ext_wall,char_ext_wall,Wall Material,char,categorical,TRUE,TRUE,TRUE,4,Stucco,STUC,NA
+FBATH,QU_FULL_BATH,fbath,char_fbath,Full Baths,char,numeric,TRUE,TRUE,TRUE,NA,NA,NA,"Number of full bathrooms, defined as having a bath or shower. If this value is missing, the default value is set to 1."
+FRPL,QU_FIRE_PLACE,frpl,char_frpl,Fireplaces,char,numeric,TRUE,TRUE,TRUE,NA,NA,NA,"Number of fireplaces, counted as the number of flues one can see from the outside of the building."
+GAR1_AREA,QU_GARAGE_AREA,gar1_area,char_gar1_area,Garage 1 Area,char,categorical,TRUE,FALSE,TRUE,1,Yes,YES,"Is Garage 1 physically including within the building area? If yes, the garage area is subtracted from the building square feet calculation by the field agent."
+GAR1_AREA,QU_GARAGE_AREA,gar1_area,char_gar1_area,Garage 1 Area,char,categorical,TRUE,FALSE,TRUE,2,No,NO,"Is Garage 1 physically including within the building area? If yes, the garage area is subtracted from the building square feet calculation by the field agent."
+GAR1_ATT,QU_GARAGE_ATTACHED,gar1_att,char_gar1_att,Garage 1 Attached,char,categorical,TRUE,FALSE,TRUE,1,Yes,YES,NA
+GAR1_ATT,QU_GARAGE_ATTACHED,gar1_att,char_gar1_att,Garage 1 Attached,char,categorical,TRUE,FALSE,TRUE,2,No,NO,NA
+GAR1_CNST,QU_GARAGE_CONST,gar1_cnst,char_gar1_cnst,Garage 1 Material,char,categorical,TRUE,FALSE,TRUE,1,Frame,FRAM,NA
+GAR1_CNST,QU_GARAGE_CONST,gar1_cnst,char_gar1_cnst,Garage 1 Material,char,categorical,TRUE,FALSE,TRUE,2,Masonry,MASR,NA
+GAR1_CNST,QU_GARAGE_CONST,gar1_cnst,char_gar1_cnst,Garage 1 Material,char,categorical,TRUE,FALSE,TRUE,3,Frame + Masonry,FRMA,NA
+GAR1_CNST,QU_GARAGE_CONST,gar1_cnst,char_gar1_cnst,Garage 1 Material,char,categorical,TRUE,FALSE,TRUE,4,Stucco,STUC,NA
+GAR1_SIZE,QU_GARAGE_SIZE,gar1_size,char_gar1_size,Garage 1 Size,char,categorical,TRUE,TRUE,TRUE,1,1 cars,1CAR,NA
+GAR1_SIZE,QU_GARAGE_SIZE,gar1_size,char_gar1_size,Garage 1 Size,char,categorical,TRUE,TRUE,TRUE,2,1.5 cars,1.5CAR,NA
+GAR1_SIZE,QU_GARAGE_SIZE,gar1_size,char_gar1_size,Garage 1 Size,char,categorical,TRUE,TRUE,TRUE,3,2 cars,2CAR,NA
+GAR1_SIZE,QU_GARAGE_SIZE,gar1_size,char_gar1_size,Garage 1 Size,char,categorical,TRUE,TRUE,TRUE,4,2.5 cars,2.5CAR,NA
+GAR1_SIZE,QU_GARAGE_SIZE,gar1_size,char_gar1_size,Garage 1 Size,char,categorical,TRUE,TRUE,TRUE,5,3 cars,3CAR,NA
+GAR1_SIZE,QU_GARAGE_SIZE,gar1_size,char_gar1_size,Garage 1 Size,char,categorical,TRUE,TRUE,TRUE,6,3.5 cars,3.5CAR,NA
+GAR1_SIZE,QU_GARAGE_SIZE,gar1_size,char_gar1_size,Garage 1 Size,char,categorical,TRUE,TRUE,TRUE,7,0 cars,0CAR,NA
+GAR1_SIZE,QU_GARAGE_SIZE,gar1_size,char_gar1_size,Garage 1 Size,char,categorical,TRUE,TRUE,TRUE,8,4 cars,4CAR,NA
+GAR2_AREA,NA,gar2_area,char_gar2_area,Garage 2 Area,char,categorical,FALSE,FALSE,FALSE,1,Yes,YES,"Is Garage 2 physically including within the building area? If yes, the garage area is subtracted from the building square feet calculation by the field agent."
+GAR2_AREA,NA,gar2_area,char_gar2_area,Garage 2 Area,char,categorical,FALSE,FALSE,FALSE,2,No,NO,"Is Garage 2 physically including within the building area? If yes, the garage area is subtracted from the building square feet calculation by the field agent."
+GAR2_ATT,NA,gar2_att,char_gar2_att,Garage 2 Attached,char,categorical,FALSE,FALSE,FALSE,1,Yes,YES,NA
+GAR2_ATT,NA,gar2_att,char_gar2_att,Garage 2 Attached,char,categorical,FALSE,FALSE,FALSE,2,No,NO,NA
+GAR2_CNST,NA,gar2_cnst,char_gar2_cnst,Garage 2 Material,char,categorical,FALSE,FALSE,FALSE,1,Frame,FRAM,NA
+GAR2_CNST,NA,gar2_cnst,char_gar2_cnst,Garage 2 Material,char,categorical,FALSE,FALSE,FALSE,2,Masonry,MASR,NA
+GAR2_CNST,NA,gar2_cnst,char_gar2_cnst,Garage 2 Material,char,categorical,FALSE,FALSE,FALSE,3,Frame + Masonry,FRMA,NA
+GAR2_CNST,NA,gar2_cnst,char_gar2_cnst,Garage 2 Material,char,categorical,FALSE,FALSE,FALSE,4,Stucco,STUC,NA
+GAR2_SIZE,NA,gar2_size,char_gar2_size,Garage 2 Size,char,categorical,FALSE,FALSE,FALSE,1,1 cars,1CAR,NA
+GAR2_SIZE,NA,gar2_size,char_gar2_size,Garage 2 Size,char,categorical,FALSE,FALSE,FALSE,2,1.5 cars,1.5CAR,NA
+GAR2_SIZE,NA,gar2_size,char_gar2_size,Garage 2 Size,char,categorical,FALSE,FALSE,FALSE,3,2 cars,2CAR,NA
+GAR2_SIZE,NA,gar2_size,char_gar2_size,Garage 2 Size,char,categorical,FALSE,FALSE,FALSE,4,2.5 cars,2.5CAR,NA
+GAR2_SIZE,NA,gar2_size,char_gar2_size,Garage 2 Size,char,categorical,FALSE,FALSE,FALSE,5,3 cars,3CAR,NA
+GAR2_SIZE,NA,gar2_size,char_gar2_size,Garage 2 Size,char,categorical,FALSE,FALSE,FALSE,6,3.5 cars,3.5CAR,NA
+GAR2_SIZE,NA,gar2_size,char_gar2_size,Garage 2 Size,char,categorical,FALSE,FALSE,FALSE,7,0 cars,0CAR,NA
+GAR2_SIZE,NA,gar2_size,char_gar2_size,Garage 2 Size,char,categorical,FALSE,FALSE,FALSE,8,4 cars,4CAR,NA
+HBATH,QU_HALF_BATH,hbath,char_hbath,Half Baths,char,numeric,TRUE,TRUE,TRUE,NA,NA,NA,"Number of half baths, defined as bathrooms without a shower or bathtub."
+HD_SF,NA,hd_sf,char_hd_sf,Land Square Feet,char,numeric,TRUE,TRUE,TRUE,NA,NA,NA,"Square feet of the land (not just the building) of the property. Note that land is divided into 'plots' and 'parcels' - this field applies to parcels, identified by PIN."
+HEAT,QU_HEAT,heat,char_heat,Central Heating,char,categorical,TRUE,TRUE,TRUE,1,Warm Air Furnace,FURN,NA
+HEAT,QU_HEAT,heat,char_heat,Central Heating,char,categorical,TRUE,TRUE,TRUE,2,Hot Water Steam,STM,NA
+HEAT,QU_HEAT,heat,char_heat,Central Heating,char,categorical,TRUE,TRUE,TRUE,3,Electric Heater,ELEC,NA
+HEAT,QU_HEAT,heat,char_heat,Central Heating,char,categorical,TRUE,TRUE,TRUE,4,None,NONE,NA
+NCU,QU_NO__COM_UNIT,ncu,char_ncu,Number of Commercial Units,char,numeric,FALSE,FALSE,FALSE,NA,NA,NA,Number of commercial units (the vast majority are for properties with class 212).
+OHEAT,NA,oheat,char_oheat,Other Heating,char,categorical,TRUE,TRUE,TRUE,1,Floor Furnace,FURN,NA
+OHEAT,NA,oheat,char_oheat,Other Heating,char,categorical,TRUE,TRUE,TRUE,2,Unit Heater,UNIT,NA
+OHEAT,NA,oheat,char_oheat,Other Heating,char,categorical,TRUE,TRUE,TRUE,3,Stove,STVE,NA
+OHEAT,NA,oheat,char_oheat,Other Heating,char,categorical,TRUE,TRUE,TRUE,4,Solar,SOLR,NA
+OHEAT,NA,oheat,char_oheat,Other Heating,char,categorical,TRUE,TRUE,TRUE,5,None,NONE,NA
+OT_IMPR,NA,ot_impr,char_ot_impr,Other Improvements,char,numeric,TRUE,FALSE,FALSE,NA,NA,NA,NA
+PORCH,QU_PORCH,porch,char_porch,Porch,char,categorical,TRUE,TRUE,TRUE,1,Frame Enclosed,FRAM,NA
+PORCH,QU_PORCH,porch,char_porch,Porch,char,categorical,TRUE,TRUE,TRUE,2,Masonry Enclosed,MSRY,NA
+PORCH,QU_PORCH,porch,char_porch,Porch,char,categorical,TRUE,TRUE,TRUE,3,None,NONE,NA
+RENOVATION,QU_RENOVATION,NA,char_renovation,Renovation,char,categorical,TRUE,FALSE,FALSE,1,Yes,YES,NA
+RENOVATION,QU_RENOVATION,NA,char_renovation,Renovation,char,categorical,TRUE,FALSE,FALSE,2,No,NO,NA
+REPAIR_CND,QU_STATE_OF_REPAIR,repair_cnd,char_repair_cnd,Repair Condition,char,categorical,TRUE,FALSE,FALSE,1,Above Average,GOOD,"This field is subjective and contains little variation. As such, it is not used for modeling."
+REPAIR_CND,QU_STATE_OF_REPAIR,repair_cnd,char_repair_cnd,Repair Condition,char,categorical,TRUE,FALSE,FALSE,2,Average,AVG,"This field is subjective and contains little variation. As such, it is not used for modeling."
+REPAIR_CND,QU_STATE_OF_REPAIR,repair_cnd,char_repair_cnd,Repair Condition,char,categorical,TRUE,FALSE,FALSE,3,Below Average,POOR,"This field is subjective and contains little variation. As such, it is not used for modeling."
+ROOF_CNST,QU_ROOF,roof_cnst,char_roof_cnst,Roof Material,char,categorical,TRUE,TRUE,TRUE,1,Shingle + Asphalt,SHAS,NA
+ROOF_CNST,QU_ROOF,roof_cnst,char_roof_cnst,Roof Material,char,categorical,TRUE,TRUE,TRUE,2,Tar + Gravel,TRGR,NA
+ROOF_CNST,QU_ROOF,roof_cnst,char_roof_cnst,Roof Material,char,categorical,TRUE,TRUE,TRUE,3,Slate,SLTE,NA
+ROOF_CNST,QU_ROOF,roof_cnst,char_roof_cnst,Roof Material,char,categorical,TRUE,TRUE,TRUE,4,Shake,SHKE,NA
+ROOF_CNST,QU_ROOF,roof_cnst,char_roof_cnst,Roof Material,char,categorical,TRUE,TRUE,TRUE,5,Tile,TILE,NA
+ROOF_CNST,QU_ROOF,roof_cnst,char_roof_cnst,Roof Material,char,categorical,TRUE,TRUE,TRUE,6,Other,OTHR,NA
+ROOMS,QU_ROOMS,rooms,char_rooms,Rooms,char,numeric,TRUE,FALSE,TRUE,NA,NA,NA,Number of rooms in the property (excluding baths). Not to be confused with bedrooms
+SITE,QU_SITE_DESIRE,site,char_site,Site Desirability,char,categorical,TRUE,FALSE,FALSE,1,Beneficial To Value,BTV,This field lacks sufficient variation to be useful for modeling.
+SITE,QU_SITE_DESIRE,site,char_site,Site Desirability,char,categorical,TRUE,FALSE,FALSE,2,Not Relevant To Value,NRTV,This field lacks sufficient variation to be useful for modeling.
+SITE,QU_SITE_DESIRE,site,char_site,Site Desirability,char,categorical,TRUE,FALSE,FALSE,3,Detracts From Value,DFV,This field lacks sufficient variation to be useful for modeling.
+TP_DSGN,QU_TYPE_DESIGN,tp_dsgn,char_tp_dsgn,Cathedral Ceiling,char,categorical,TRUE,FALSE,TRUE,1,Yes,YES,"This field name comes from a variable that is no longer used, but the field name was not changed to reflect Cathedral Ceiling"
+TP_DSGN,QU_TYPE_DESIGN,tp_dsgn,char_tp_dsgn,Cathedral Ceiling,char,categorical,TRUE,FALSE,TRUE,2,No,NO,"This field name comes from a variable that is no longer used, but the field name was not changed to reflect Cathedral Ceiling"
+TP_PLAN,QU_TYPE_PLAN,tp_plan,char_tp_plan,Design Plan,char,categorical,TRUE,FALSE,TRUE,1,Architect,ARCT,NA
+TP_PLAN,QU_TYPE_PLAN,tp_plan,char_tp_plan,Design Plan,char,categorical,TRUE,FALSE,TRUE,2,Stock Plan,STCK,NA
+TYPE_RESD,QU_TYPE_OF_RES,type_resd,char_type_resd,Type of Residence,char,categorical,TRUE,TRUE,TRUE,1,1 Story,1STRY,"Residences with 1.5 - 1.9 stories are one story and have partial livable attics and are classified based on the square footage of the attic compared to the first floor of the house. So, 1.5 story houses have an attic that is 50% of the area of the first floor, 1.6 story houses are 60%, 1.7 are 70%, etc. However, what is recorded on the field card differs from what is in the database. All 1.5 - 1.9 story houses are coded as 5"
+TYPE_RESD,QU_TYPE_OF_RES,type_resd,char_type_resd,Type of Residence,char,categorical,TRUE,TRUE,TRUE,2,2 Story,2STRY,"Residences with 1.5 - 1.9 stories are one story and have partial livable attics and are classified based on the square footage of the attic compared to the first floor of the house. So, 1.5 story houses have an attic that is 50% of the area of the first floor, 1.6 story houses are 60%, 1.7 are 70%, etc. However, what is recorded on the field card differs from what is in the database. All 1.5 - 1.9 story houses are coded as 6"
+TYPE_RESD,QU_TYPE_OF_RES,type_resd,char_type_resd,Type of Residence,char,categorical,TRUE,TRUE,TRUE,3,3 Story +,3STRY+,"Residences with 1.5 - 1.9 stories are one story and have partial livable attics and are classified based on the square footage of the attic compared to the first floor of the house. So, 1.5 story houses have an attic that is 50% of the area of the first floor, 1.6 story houses are 60%, 1.7 are 70%, etc. However, what is recorded on the field card differs from what is in the database. All 1.5 - 1.9 story houses are coded as 7"
+TYPE_RESD,QU_TYPE_OF_RES,type_resd,char_type_resd,Type of Residence,char,categorical,TRUE,TRUE,TRUE,4,Split Level,SPLT,"Residences with 1.5 - 1.9 stories are one story and have partial livable attics and are classified based on the square footage of the attic compared to the first floor of the house. So, 1.5 story houses have an attic that is 50% of the area of the first floor, 1.6 story houses are 60%, 1.7 are 70%, etc. However, what is recorded on the field card differs from what is in the database. All 1.5 - 1.9 story houses are coded as 8"
+TYPE_RESD,QU_TYPE_OF_RES,type_resd,char_type_resd,Type of Residence,char,categorical,TRUE,TRUE,TRUE,5,1.5 Story,1.5STRY,"Residences with 1.5 - 1.9 stories are one story and have partial livable attics and are classified based on the square footage of the attic compared to the first floor of the house. So, 1.5 story houses have an attic that is 50% of the area of the first floor, 1.6 story houses are 60%, 1.7 are 70%, etc. However, what is recorded on the field card differs from what is in the database. All 1.5 - 1.9 story houses are coded as 9"
+TYPE_RESD,QU_TYPE_OF_RES,type_resd,char_type_resd,Type of Residence,char,categorical,TRUE,TRUE,TRUE,6,1.6 Story,1.6STRY,"Residences with 1.5 - 1.9 stories are one story and have partial livable attics and are classified based on the square footage of the attic compared to the first floor of the house. So, 1.5 story houses have an attic that is 50% of the area of the first floor, 1.6 story houses are 60%, 1.7 are 70%, etc. However, what is recorded on the field card differs from what is in the database. All 1.5 - 1.9 story houses are coded as 10"
+TYPE_RESD,QU_TYPE_OF_RES,type_resd,char_type_resd,Type of Residence,char,categorical,TRUE,TRUE,TRUE,7,1.7 Story,1.7STRY,"Residences with 1.5 - 1.9 stories are one story and have partial livable attics and are classified based on the square footage of the attic compared to the first floor of the house. So, 1.5 story houses have an attic that is 50% of the area of the first floor, 1.6 story houses are 60%, 1.7 are 70%, etc. However, what is recorded on the field card differs from what is in the database. All 1.5 - 1.9 story houses are coded as 11"
+TYPE_RESD,QU_TYPE_OF_RES,type_resd,char_type_resd,Type of Residence,char,categorical,TRUE,TRUE,TRUE,8,1.8 Story,1.8STRY,"Residences with 1.5 - 1.9 stories are one story and have partial livable attics and are classified based on the square footage of the attic compared to the first floor of the house. So, 1.5 story houses have an attic that is 50% of the area of the first floor, 1.6 story houses are 60%, 1.7 are 70%, etc. However, what is recorded on the field card differs from what is in the database. All 1.5 - 1.9 story houses are coded as 12"
+TYPE_RESD,QU_TYPE_OF_RES,type_resd,char_type_resd,Type of Residence,char,categorical,TRUE,TRUE,TRUE,9,1.9 Story,1.9STRY,"Residences with 1.5 - 1.9 stories are one story and have partial livable attics and are classified based on the square footage of the attic compared to the first floor of the house. So, 1.5 story houses have an attic that is 50% of the area of the first floor, 1.6 story houses are 60%, 1.7 are 70%, etc. However, what is recorded on the field card differs from what is in the database. All 1.5 - 1.9 story houses are coded as 13"
+USE,QU_USE,use_1,char_use,Use,char,categorical,TRUE,TRUE,TRUE,1,Single-Family,SF,NA
+USE,QU_USE,use_1,char_use,Use,char,categorical,TRUE,TRUE,TRUE,2,Multi-Family,MF,NA
+VOLUME,QU_VOL,NA,char_volume,Volume,char,numeric,FALSE,FALSE,FALSE,NA,NA,NA,Need to clarify definition.
+midincome,NA,tract_midincome,econ_midincome,Tract Median Income,econ,numeric,TRUE,TRUE,TRUE,NA,NA,NA,Median income of the census tract containing the property centroid.
+TAX_AMT_PAID,NA,NA,econ_tax_amt_paid,Tax Amount Paid,econ,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Tax amount paid by the property owner. Taken from Cook County Treasurer's Office.
+TAX_CD,NA,NA,econ_tax_cd,Tax Location Code,econ,character,FALSE,FALSE,FALSE,NA,NA,NA,NA
+TAX_RATE,NA,NA,econ_tax_rate,Tax Rate,econ,numeric,TRUE,TRUE,TRUE,NA,NA,NA,Tax rate paid by the property owner. Taken from Cook County Treasurer's Office.
+NA,NA,NA,econ_foreclosures_month_town,Number of Foreclosures in Town Per Month,econ,numeric,TRUE,FALSE,FALSE,NA,NA,NA,The number of foreclosures in the property's township during the month the sale occurred in
+NA,NA,NA,econ_foreclosures_quarter_town,Number of Foreclosures in Town Per Quarter,econ,numeric,TRUE,FALSE,FALSE,NA,NA,NA,The number of foreclosures in the property's township during the quarter the sale occurred in
+black_perc,NA,tract_black_perc,geo_black_perc,Tract Percent Pop. Black,geo,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Black population percentage of the census tract containing the property centroid.
+census_tract,NA,tract_id,geo_census_tract,Census Tract,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,Last 6 digits of GEOID for matched census tract (tract ID only).
+centroid_x,NA,longitude,geo_longitude,Longitude,geo,numeric,TRUE,TRUE,FALSE,NA,NA,NA,"Longitude coordinate of the property's location, as defined by the centroid of the parcel shape in GIS."
+centroid_y,NA,latitude,geo_latitude,Latitude,geo,numeric,TRUE,TRUE,FALSE,NA,NA,NA,"Latitude coordinate of the property's location, as defined by the centroid of the parcel shape in GIS."
+commissioner_dist,NA,commissioner_dist,geo_commissioner_dist,Cook County Commissioner District,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,NA
+FIPS,NA,municipality_fips,geo_fips,Municipality FIPS Code,geo,character,TRUE,FALSE,FALSE,NA,NA,NA,FIPS code of the municipality containing the property.
+floodplain,NA,floodplain,geo_floodplain,FEMA Floodplain,geo,logical,TRUE,FALSE,TRUE,NA,NA,NA,Indicator for whether property lies within a FEMA-defined floodplain.
+geoid,NA,tract_geoid,geo_geoid,Tract GEOID,geo,character,TRUE,FALSE,FALSE,NA,NA,NA,Full 11-digit GEOID for matched census tract.
+his_perc,NA,tract_his_perc,geo_his_perc,Tract Percent Pop. Hispanic,geo,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Hispanic population percentage of the census tract containing the property centroid.
+MAILING_ADDRESS,NA,mailing_address,geo_mailing_address,Mailing Address,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,Mailing address of the property owner.
+MAILING_STATE,NA,mailing_state,geo_mailing_state,Mailing State,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,Mailing state of the property owner.
+MAILING_CITY,NA,mailing_city,geo_mailing_city,Mailing City,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,Mailing city of the property owner.
+MAILING_ZIP,NA,mailing_zip,geo_mailing_zip,Mailing Zip Code,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,Mailing zip code of the property owner.
+municipality,NA,municipality,geo_municipality,Municipality Name,geo,character,TRUE,FALSE,FALSE,NA,NA,NA,NA
+ohare_noise,NA,ohare_noise,geo_ohare_noise,O'Hare Noise Indicator,geo,logical,TRUE,FALSE,TRUE,NA,NA,NA,NA
+other_perc,NA,tract_other_perc,geo_other_perc,Tract Percent Pop. Other,geo,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Other population percentage of the census tract containing the property centroid.
+PROPERTY_ADDRESS,NA,property_address,geo_property_address,Property Address,geo,character,TRUE,FALSE,FALSE,NA,NA,NA,"Property street address, not the address of the taxpayer."
+PROPERTY_APT_NO,NA,property_apt_no,geo_property_apt_no,Property Apartment Num.,geo,character,TRUE,FALSE,FALSE,NA,NA,NA,"Property street address, not the address of the taxpayer."
+PROPERTY_CITY,NA,property_city,geo_property_city,Property City,geo,character,TRUE,FALSE,FALSE,NA,NA,NA,"Property street address, not the address of the taxpayer."
+PROPERTY_ZIP,NA,property_zip,geo_property_zip,Property Zip Code,geo,character,TRUE,FALSE,FALSE,NA,NA,NA,"Property street address, not the address of the taxpayer."
+PUMA,NA,puma,geo_puma,Public Use Microdata Area,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,NA
+reps_dist,NA,reps_dist,geo_reps_dist,Illinois State Representative District,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,NA
+senate_dist,NA,senate_dist,geo_senate_dist,Illinois State Senate District,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,NA
+tif_agencynum,NA,tif_agencynum,geo_tif_agencynum,TIF Agency Number,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,NA
+ward,NA,ward,geo_ward,City of Chicago Ward,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,NA
+white_perc,NA,tract_white_perc,geo_white_perc,Tract Percent Pop. White,geo,numeric,TRUE,FALSE,FALSE,NA,NA,NA,White population percentage of the census tract containing the property centroid.
+withinmr100,NA,withinmr100,geo_withinmr100,Road Proximity < 100 Feet,geo,logical,TRUE,FALSE,TRUE,NA,NA,NA,Indicates whether the property is within 100 feet of a major road.
+withinmr101300,NA,withinmr101300,geo_withinmr101300,Road Proximity 101 - 300 Feet,geo,logical,TRUE,FALSE,TRUE,NA,NA,NA,Indicates whether the property is between 101 and 300 feet of a major road.
+MULTI_IND,NA,multi_ind,ind_multi_code,Multi Code Indicator,ind,logical,TRUE,FALSE,FALSE,NA,NA,NA,"Indicates a property with multiple improvements on one PIN, e.g. a main house and a coach house. NOT to be confused with a property which was part of a multi-pin sale."
+NA,NA,NA,ind_large_home,Large Home Indicator,ind,logical,TRUE,FALSE,FALSE,NA,NA,NA,"If true, property class is either 208 or 209."
+NA,NA,NA,ind_class_error,Class Code Error Indicator,ind,logical,TRUE,FALSE,FALSE,NA,NA,NA,"If true, the recorded characteristics do not align with the recorded class. See chars_check_class() function in CCAO package for details."
+NA,NA,NA,ind_large_lot,Large Lot Indicator,ind,logical,TRUE,FALSE,TRUE,NA,NA,NA,"Large lot factor variable, where 1 acre of land (land square feet > 43559) is defined as a large lot. 1 = large lot, 0 = not a large lot."
+NA,NA,NA,ind_garage,Garage Indicator,ind,logical,TRUE,FALSE,TRUE,NA,NA,NA,Indicates presence of a garage of any size.
+NA,NA,pure_market_filter,ind_pure_market,Pure Market Indicator,ind,logical,TRUE,FALSE,FALSE,NA,NA,NA,Indicates whether a sale has pure market/arms length characteristics.
+CDU,NA,condition_desirability_and_utility,meta_cdu,"Condition, Desirability, and Utility",meta,character,TRUE,FALSE,FALSE,NA,NA,NA,"Dozens of codes attached to face sheet that denote a number of seemingly unrelated characteristics associated with a PIN, ranging from condition to types of subsidies. This field does not match across the SQL server/AS-400."
+CLASS,QU_CLASS,class,meta_class,Property Class,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,NA
+DOC_NO,NA,doc_no,meta_document_num,Sale Document Number,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,"Document number of a property sale, as recorded by the Clerk's office."
+DT_KEY_PIN,NA,key_pin,meta_key_pin,Key PIN,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,Need to clarify definition.
+KEY_PIN,NA,key_pin,meta_key_pin,Key PIN,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,Need to clarify definition.
+DT_MLT_CD,QU_MLT_CD,NA,meta_multi_code,Multi Code,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,Field that serves as a key when multiple buildings or improvements exist on the same PIN. Numeric values do not necessary correspond to number of buildings. Can also represent improvements added through Home Improvement Exemptions (288s).
+MLT_CD,QU_MLT_CD,NA,meta_multi_code,Multi Code,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,Field that serves as a key when multiple buildings or improvements exist on the same PIN. Numeric values do not necessary correspond to number of buildings. Can also represent improvements added through Home Improvement Exemptions (288s).
+MODELING_GROUP,NA,modeling_group,meta_modeling_group,Modeling Group,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,"Modeling group, as defined by the property class. Properties with class 200, 201, 241, 299 is defined as ""NCHARS"", short for ""no characteristics"", which are condos and vacant land classes. Properties with class 202, 203, 204, 205, 206, 207, 208, 209, 210, 235, 278, and 295 are ""SF"", short for ""single-family."" Properties with class 211 and 212 are ""MF"", short for ""multi-family."" Properties with class 218 and 219 are ""BB"", short for ""bed and breakfast."""
+MULTI_CODE,QU_MLT_CD,multi_code,meta_multi_code,Multi Code,meta,categorical,TRUE,FALSE,FALSE,NA,NA,NA,Field that serves as a key when multiple buildings or improvements exist on the same PIN. Numeric values do not necessary correspond to number of buildings. Can also represent improvements added through Home Improvement Exemptions (288s).
+NBHD,QU_NBHD,nbhd,meta_nbhd,Neighborhood Code,meta,character,TRUE,FALSE,TRUE,NA,NA,NA,"Assessor neighborhood. First 2 digits are township code, last 3 digits are neighborhood code."
+DT_PER_ASS,NA,dt_per_ass,meta_per_ass,Percent Assessed,meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,"Percent assessed for prorated properties. Percent of ownership of a condo building for a unit as defined by the condominium declaration. If missing, default is 1/n_units."
+PER_ASS,NA,per_ass,meta_per_ass,Percent Assessed,meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,"Percent assessed for prorated properties. Percent of ownership of a condo building for a unit as defined by the condominium declaration. If missing, default is 1/n_units."
+PIN,QU_PIN,pin,meta_pin,Property Index Number,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,All PINs are 14 digits: 2 digits for area + 2 digits for sub area + 2 digits for block + 2 digits for parcel + 4 digits for the multicode
+2YR_PRI_BOR_EST_BLDG,NA,2yr_pri_bor_est_bldg,meta_2yr_pri_board_est_bldg,2 Years Prior BoR Estimate (Building),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Board of Review final estimated market value of building from 2 years prior to observation year.
+2YR_PRI_BOR_EST_LAND,NA,2yr_pri_bor_est_land,meta_2yr_pri_board_est_land,2 Years Prior BoR Estimate (Land),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Board of Review final estimated market value of land from 2 years prior to observation year.
+1YR_PRI_BOR_EST_BLDG,NA,1yr_pri_bor_est_bldg,meta_1yr_pri_board_est_bldg,1 Year Prior BoR Estimate (Building),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Board of Review final estimated market value of building from 1 year prior to observation year.
+1YR_PRI_BOR_EST_LAND,NA,1yr_pri_bor_est_land,meta_1yr_pri_board_est_land,1 Year Prior BoR Estimate (Land),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Board of Review final estimated market value of land from 1 year prior to observation year.
+MAILED_EST_BLDG,NA,mailed_est_bldg,meta_mailed_est_bldg,Assessor Mailed Estimate (Building),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Assessor mailed estimated market value of building from observation year.
+MAILED_EST_LAND,NA,mailed_est_land,meta_mailed_est_land,Assessor Mailed Estimate (Land),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Assessor mailed estimated market value of land from observation year.
+CERTIFIED_EST_BLDG,NA,certified_est_bldg,meta_certified_est_bldg,Assessor Certified Estimate (Building),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Assessor certified estimated market value of building from observation year.
+CERTIFIED_EST_LAND,NA,certified_est_land,meta_certified_est_land,Assessor Certified Estimate (Land),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Assessor certified estimated market value of land from observation year.
+sale_date,NA,sale_date,meta_sale_date,Sale Date,meta,date,TRUE,FALSE,FALSE,NA,NA,NA,Date of sale.
+sale_price,NA,sale_price,meta_sale_price,Sale Price,meta,numeric,TRUE,TRUE,TRUE,NA,NA,NA,Market price of sale.
+TAX_YEAR,NA,tax_year,meta_year,Year,meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,NA
+TOWN_NAME,NA,township_name,meta_town_name,Township Name,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,NA
+TOWN_CODE,QU_TOWN,township,meta_town_code,Township Code,meta,character,TRUE,FALSE,TRUE,NA,NA,NA,NA
+NA,NA,sale_year,time_sale_year,Sale Year,time,numeric,TRUE,FALSE,TRUE,NA,NA,NA,Sale year calculated as the number of years since 0 B.C.E.
+NA,NA,sale_quarter,time_sale_quarter,Sale Quarter,time,numeric,TRUE,TRUE,TRUE,NA,NA,NA,Sale quarter calculated as the number of quarters since January 1997.
+NA,NA,sale_month,time_sale_month,Sale Month,time,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Sale month calculated as the number of months since January 1997.
+NA,NA,sale_week,time_sale_week,Sale Week,time,numeric,TRUE,FALSE,TRUE,NA,NA,NA,"Sale week calculated as the number of weeks since January 1st, 1997."
+NA,NA,sale_day,time_sale_week,Sale Day,time,numeric,TRUE,FALSE,FALSE,NA,NA,NA,"Sale day calculated as the number of days since January 1st, 1997."
+NA,NA,sale_quarter_of_year,time_sale_quarter_of_year,Sale Quarter of Year,time,character,TRUE,FALSE,TRUE,NA,NA,NA,Character encoding of quarter of year (Q1 - Q4).
+NA,NA,sale_month_of_year,time_sale_month_of_year,Sale Month of Year,time,character,TRUE,FALSE,TRUE,NA,NA,NA,Character encoding of month of year (Jan - Dec).
+NA,NA,sale_week_of_year,time_sale_week_of_year,Sale Week of Year,time,numeric,TRUE,FALSE,TRUE,NA,NA,NA,Numeric encoding of week of year (1 - 52).
+NA,NA,sale_day_of_year,time_sale_day_of_year,Sale Day of Year,time,numeric,TRUE,FALSE,TRUE,NA,NA,NA,Numeric encoding of day of year (1 - 365).
+NA,NA,sale_during_school_year,time_sale_during_school_year,Sale During School Year,time,logical,TRUE,FALSE,TRUE,NA,NA,NA,Indicator for whether sale occurred during usual school year (September - May).
+NA,NA,sale_during_holidays,time_sale_during_holidays,Sale During Holidays,time,logical,TRUE,FALSE,TRUE,NA,NA,NA,Indicator for whether sale occurred during holiday season (November - January).
+NA,NA,nbhd_avg,meta_nbhd_avg,Neighborhood Mean Sale Price,meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Mean sale price of a given neighborhood. Can be used in lieu of neighborhood dummy variables in order to reduce sparsity.
+NA,NA,nbhd_med,meta_nbhd_med,Neighborhood Median Sale Price,meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Median sale price of a given neighborhood. Can be used in lieu of neighborhood dummy variables in order to reduce sparsity.
+fs_flood_risk_direction,NA,fs_flood_risk_direction,geo_fs_flood_risk_direction,Flood Risk Direction,geo,numeric,TRUE,FALSE,TRUE,NA,NA,NA,"The property's flood risk direction represented in a numeric value based on the change in risk for the location from 2020 to 2050 for the climate model realization of the RCP 4.5 mid emissions scenario. -1 = descreasing, 0 = stationary, 1 = increasing. Data provided by First Street and academics at UPenn."
+fs_flood_factor,NA,fs_flood_factor,geo_fs_flood_factor,Flood Risk Factor,geo,numeric,TRUE,FALSE,TRUE,NA,NA,NA,"The property's First Street Flood Factor, a numeric integer from 1-10 (where 1 = minimal and 10 = extreme) based on flooding risk to the building footprint. Flood risk is defined as a combination of cumulative risk over 30 years and flood depth. Flood depth is calculated at the lowest elevation of the building footprint (largest if more than 1 exists, or property centroid where footprint does not exist. Data provided by First Street and academics at UPenn."
+school_elem_district,NA,school_elem_district,geo_school_elem_district,Elementary/Middle School District,geo,character,TRUE,FALSE,TRUE,NA,NA,NA,Elementary and middle school district boundaries for Cook County and CPS.
+school_hs_district,NA,school_hs_district,geo_school_hs_district,High School District,geo,character,TRUE,FALSE,TRUE,NA,NA,NA,High school district boundaries for Cook County and CPS.
+asian_perc,NA,tract_asian_perc,geo_asian_perc,Tract Percent Pop. Asian,geo,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Asian population percentage of the census tract containing the property centroid.
+tract_pop,NA,tract_pop,geo_tract_pop,Tract Population,geo,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Total population of the Census tract containing the property centroid.
+ssa_name,NA,ssa_name,geo_ssa_name,Special Service Area Name,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,Name of the City of Chicago Special Service Area the property lies within.
+ssa_no,NA,ssa_no,geo_ssa_no,Special Service Area Number,geo,character,FALSE,FALSE,FALSE,NA,NA,NA,Number of the City of Chicago Special Service Area the property lies within.
+DEED_TYPE,NA,deed_type,meta_deed_type,Sale Deed Type,meta,character,TRUE,FALSE,FALSE,NA,NA,NA,Deed type of a property sale.
+NUM_288S_ACTIVE,NA,num_288s_active,meta_num_288s_active,Number of Active 288s (HIEs),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Number of 288s (Home Improvement Exemptions) active for this property in the given year.
+NUM_288S_ENDED,NA,num_288s_ended,meta_num_288s_ended,Number of Ended 288s (HIEs),meta,numeric,TRUE,FALSE,FALSE,NA,NA,NA,Number of 288s (Home Improvement Exemptions) that ended in the given year. This is effectively an indicator for properties that have updated characteristics due to a 288 expiring.
